@@ -2,7 +2,7 @@ install: ## install python package
 	@echo "install python package"
 	@pip install -r requirements.txt
 
-serve: ## Run the FastAPI server
+run: ## Run the FastAPI server
 	@echo "🚀 Running Ray Sevre"
 	@serve run deployment.yaml
 

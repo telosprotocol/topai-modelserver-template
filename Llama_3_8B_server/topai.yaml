@@ -1,0 +1,12 @@
+topai_service:
+  name: Llama_3_8B_server
+  model_type: LLM
+  import_path: src.main:vllmservice
+  huggingface:
+    key: xx
+  Engine: vllm
+  Engine_args:
+    model: NousResearch/Meta-Llama-3-8B
+    served_model_name: ["Meta-Llama-3-8B"]
+    tensor_parallel_size: 1
+    max_model_len: 8192

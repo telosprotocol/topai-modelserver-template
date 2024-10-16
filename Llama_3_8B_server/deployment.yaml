@@ -37,8 +37,8 @@ applications:
 
         user_config:
           engine_args:
-            model: meta-llama/Meta-Llama-3.1-8B-Instruct
-            served_model_name: ["Meta-Llama-3.1-8B-Instruct"]
+            model: NousResearch/Meta-Llama-3-8B
+            served_model_name: ["Meta-Llama-3-8B"]
             download_dir: models/
             trust_remote_code: true
             tensor_parallel_size: 1
