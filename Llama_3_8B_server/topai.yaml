@@ -1,12 +1,15 @@
-topai_service:
-  name: Llama_3_8B_server
-  model_type: LLM
-  import_path: src.main:vllmservice
-  huggingface:
-    key: xx
-  Engine: vllm
-  Engine_args:
-    model: NousResearch/Meta-Llama-3-8B
-    served_model_name: ["Meta-Llama-3-8B"]
-    tensor_parallel_size: 1
-    max_model_len: 8192
+topai:
+  name: llama-3-8b-server  # Name of the model service
+  model:
+    types: llm  # Model type: Large Language Model
+    sources:
+      local:
+        path: /home/models/  # Local storage path for the model
+  serving:
+    import_path: src.main:vllmservice  # Import path for the serving framework (default:Ray Serve)
+  inference:
+    engines:
+      vllm:  # vLLM inference engine configuration
+        model: NousResearch/Meta-Llama-3-8B  # Model name/path
+        serve_model_name: Meta-Llama-3-8B  # Name of the model when served
+        max_model_len: 8192  # Maximum sequence length for the model
