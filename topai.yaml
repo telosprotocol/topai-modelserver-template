@@ -1,5 +1,6 @@
 topai:
   name: llama-3-8b-server  # Name of the model service
+  project_path: Llama_3_8B_Server  # Project path
   model:
     type: llm  # Model type: Large Language Model
     source:
