@@ -25,12 +25,6 @@ applications:
     deployments:
       - name: VLLMService
 
-        autoscaling_config:
-          target_ongoing_requests: 5
-          min_replicas: 1
-          max_replicas: 2
-          max_ongoing_requests: 10
-
         ray_actor_options:
           num_cpus: 4
           num_gpus: 1
