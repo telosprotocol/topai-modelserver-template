@@ -1,6 +1,6 @@
 topai:
   name: llama-3-8b-server  # 模型服务名称
-  project_path: Llama_3_8B_Server  # 项目路径，用于定位代码和配置文件。相对与项目根目录
+  project_path: Llama_3_8B_server  # 项目路径，用于定位代码和配置文件。相对与项目根目录
   model:
     type: llm  # 模型类型：大语言模型(Large Language Model)，同时支持Text-to-Image/ASR
     source:
